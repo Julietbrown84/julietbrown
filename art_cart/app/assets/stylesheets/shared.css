@@ -1,0 +1,34 @@
+
+/*EVERYTHING*/
+body { position: relative; margin: 0 auto; font-family: Roboto; z-index: 0; cursor: crosshair;
+      background: rgba(0,0,0,0) no-repeat center center fixed; background-size: cover; color: white; text-align: center; }
+p { font-size: 12px; }
+a { text-decoration: none; color: inherit; transition: 0.5s; }
+a:hover { color: black }
+input { border: none; font-family: inherit; text-align: center; }
+input[type='submit'] { background: none; color: inherit; border: 1px solid white; font-size: 20px; transition: 0.5s; }
+input[type='submit']:hover { color: black; border-color: black; }
+.container { position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 1; }
+
+/*TOP BANNER*/
+header { position: absolute; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.9);
+         padding: 20px; padding-top: 3px;}
+header > h1 { font-size: 100px; letter-spacing: 20px; margin-bottom: 6px;}
+header > nav { font-size: 20px; padding-right: 22px; margin-bottom: 2px;}
+header > nav > a { font-size: 16px; margin: 0 8px; border: 1px solid white; padding: 0 7px 2px 7px; border-radius: 3px;}
+
+/*STORE*/
+#store_container { background: rgba(0,0,0,0.3); padding: 0 5%; overflow: auto; }
+
+/*PRODUCTS PAGE*/
+#products { background-image: url('http://julietbrowncreative.weebly.com/uploads/3/1/6/3/31635653/8021899_orig.jpg'); }
+#products_content { margin: 179px auto 60px auto; max-width: 950px; }
+#products_content > h2 { font-size: 60px; border-bottom: 1px solid white; border-top: 1px solid white; padding-bottom: 12px;  margin-bottom: 20px;}
+#products_content > li { position: relative; display: inline-block; width: 250px; height: 250px; list-style-type: none; border: 1px solid white; margin: 10px 10px 0 0; background-size: cover;}
+.bottom_tab { position: absolute; bottom: 0; right: 0; left: 0; height: 40%; background: rgba(0,0,0,0.7); border-top: 1px solid white ;}
+
+
+div.vertalign { position: relative; top: 50%; transform: translateY(-50%); }
+div.vertalign > a.title { font-size: 25px; display: inline-block; margin-bottom: 5px; }
+div.vertalign > h3 { margin-bottom: 2px; }
+div.vertalign > form > input { font-size: 12px; }

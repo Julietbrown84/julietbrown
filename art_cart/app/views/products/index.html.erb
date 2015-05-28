@@ -1,0 +1,32 @@
+<body id="products">
+  <div class="container" id="store_container">
+<h2>Art Products:</h2>
+
+    </nav>
+
+    <div id="products_content">
+
+      <% @products.each do |product| %>
+
+        <li style="background-image: url('<%= product.image_url %>')">
+          <div class="bottom_tab">
+            <div class="vertalign">
+
+              <%= link_to product.name, product_path(product.id), :class => "name" %>
+
+              <h3><%= product.price %></h3>
+              <h3><%= product.inventory %> in stock</h3>
+
+              <% if product.inventory > 0 %>
+                <%= link_to "add to cart", cart_products_add_path(product.id), method: :patch %>
+              <% else %>
+
+                <h3>out of stock</h3>
+              <% end %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </div>
+  </div>
+</body>
