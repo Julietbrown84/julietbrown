@@ -1,0 +1,13 @@
+<h1> Art Cart </h1>
+
+<ul>
+  <% @contents.each do |product_hash| %>
+    <li>
+      title: <%=product_hash[:product].title%><br>
+      quantity: <%= product_hash[:quantity]%><br>
+      <%= link_to 'remove from cart', cart_products_remove_path(product_hash[:product].id), method: :patch %>
+    </li>
+  <% end %>
+  <%= link_to "empty cart", cart_empty_path, method: :patch %>
+  <%= link_to "buy", cart_products_buy_path, method: :patch %>
+</ul>

@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+
+<div id='details_content'>
+  <div id='info'>
+    <h2><%= @product.name %></h2>
+    <h3>$<%= @product.price %>0</h3>
+    <h4><%= @product.inventory %> in stock</h4>
+  </div>
+  <img src='<%= @product.image_url %>' class='img_product_details' />
+  <div id='description'>
+    <p><%= @product.description %></p>
+    <% if @product.inventory > 0 %>
+      <%= link_to "add_to_cart", cart_products_add_path, method: :patch %>
+    <% else %>
+      <h4>Out of stock</h4>
+    <% end %>
+  </div>
+</div>
